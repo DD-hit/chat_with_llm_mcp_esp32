@@ -1,0 +1,23 @@
+# 编译输出
+build/
+
+# VSCode 配置
+.vscode/
+
+# 环境
+venv/
+server/.env
+*.env
+
+# 日志文件
+*.log
+
+# 音频
+server/user_records/
+server/response_records/
+
+# 依赖
+managed_components/
+
+# 模型文件
+server/models/SenseVoiceSmall/

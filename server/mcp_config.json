@@ -1,0 +1,20 @@
+{
+  "servers": {
+    "led_controller": {
+      "script_path": "mcp-server/led/mcp-led.py",
+      "type": "python",
+      "args": [],
+      "env": {},
+      "description": "LED控制服务器"
+    },
+    "weather": {
+      "script_path": "mcp-server/weather/mcp-weather.py",
+      "type": "python",
+      "args": [],
+      "env": {
+      },
+      "description": "天气数据读取服务器"
+    }
+  },
+  "default_servers": ["led_controller", "weather"]
+}
