@@ -156,6 +156,50 @@ python llm_mcp.py -c mcp_config.json # 使用自定义配置文件
 
 ---
 
+## 固件编译与烧录教程
+
+### 1. 安装 ESP-IDF 环境
+
+请参考 [ESP-IDF 官方文档](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/index.html) 完成环境安装。
+
+### 2. 编译固件
+
+在项目根目录下执行：
+
+```bash
+cd main
+idf.py set-target esp32s3   # 设置目标芯片（如 ESP32-S3）
+idf.py menuconfig           # 配置参数（唤醒词、Flash等）
+idf.py build                # 编译固件
+```
+
+### 3. 烧录固件
+
+连接开发板，执行：
+
+```bash
+idf.py -p <串口号> flash
+```
+
+例如：
+
+```bash
+idf.py -p COM3 flash
+```
+
+### 4. 查看串口日志（可选）
+
+```bash
+idf.py -p <串口号> monitor
+```
+
+### 5. 常见问题
+
+- 若编译或烧录失败，请检查 USB 驱动、串口号、芯片型号设置是否正确。
+- 如需自定义命令词或参数，请在 `main.cc` 或 `menuconfig` 中修改。
+
+---
+
 ## 依赖环境
 
 - Python 3.8+
