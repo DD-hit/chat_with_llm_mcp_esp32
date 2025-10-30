@@ -36,6 +36,12 @@ pip install -r requirements.txt
 
 ---
 
+## 模型文件准备
+
+请将所需的 SenseVoiceSmall（ASR语音识别）模型文件放入 `server/models` 目录下。  
+
+---
+
 ## 硬件与参数配置
 
 ### ESP32硬件连接
